@@ -1,0 +1,62 @@
+python run.py \
+    --model /home/disk1/data/Dataset_Share/decapoda-research-llama-7B-hf \
+    --alpha 0.15 \
+    --prune_method "wanda_dlp" \
+    --sparsity_ratio 0.7 \
+    --sparsity_type "unstructured"
+
+
+    ppl on wikitext2 17.326444625854492
+
+    [DLP] Layer-wise Sparsity Ratios:
+Layer      Sparsity        Density (imp_ratio) 
+---------------------------------------------
+0          0.5210           0.4790
+1          0.5429           0.4571
+2          0.5641           0.4359
+3          0.5868           0.4132
+4          0.6027           0.3973
+5          0.6210           0.3790
+6          0.6288           0.3712
+7          0.6346           0.3654
+8          0.6422           0.3578
+9          0.6478           0.3522
+10         0.6558           0.3442
+11         0.6579           0.3421
+12         0.6731           0.3269
+13         0.6815           0.3185
+14         0.6875           0.3125
+15         0.6942           0.3058
+16         0.7052           0.2948
+17         0.7189           0.2811
+18         0.7285           0.2715
+19         0.7358           0.2642
+20         0.7506           0.2494
+21         0.7570           0.2430
+22         0.7640           0.2360
+23         0.7720           0.2280
+24         0.7800           0.2200
+25         0.7909           0.2091
+26         0.7997           0.2003
+27         0.8042           0.1958
+28         0.8075           0.1925
+29         0.8156           0.1844
+30         0.8210           0.1790
+31         0.8072           0.1928
+---------------------------------------------
+pruning starts
+loading calibdation data
+dataset loading complete
+time_total: 1.0209825038909912
+ prune method is wanda_dlp
+******************************
+sparsity sanity check 0.6999
+******************************
+evaluating on wikitext2
+nsamples 166
+sample 0
+sample 50
+sample 100
+sample 150
+begin calcualte ppl
+ppl on wikitext2 17.326444625854492
